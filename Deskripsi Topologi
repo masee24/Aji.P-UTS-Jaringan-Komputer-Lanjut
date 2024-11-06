@@ -1,0 +1,25 @@
+konfigurasi yang terdiri dari beberapa perangkat komputer dan router yang saling terhubung.
+Komponen Jaringan
+Router R1 (CR):
+
+ETH 4: Terhubung ke Router R2 (KHI) dengan alamat IP 11.11.11.2.
+ETH 3: Terhubung ke Router R3 (KJ) dengan alamat IP 10.10.10.2.
+Router R2 (KHI):
+
+ETH 3: Terhubung ke Router R1 (CR) dengan alamat IP 11.11.11.1.
+ETH 4: Terhubung ke Router R3 (KJ) dengan alamat IP 12.12.12.1.
+Router R3 (KJ):
+
+ETH 3: Terhubung ke Router R1 (CR) dengan alamat IP 10.10.10.1.
+ETH 4: Terhubung ke Router R2 (KHI) dengan alamat IP 12.12.12.2.
+Komputer-klien:
+
+Komputer 1: Terhubung ke Router R1 pada ETH 2 dengan alamat IP 192.168.1.1/24.
+Komputer 2: Terhubung ke Router R2 pada ETH 2 dengan alamat IP 192.168.3.1.
+Komputer 3: Terhubung ke Router R3 pada ETH 2 dengan alamat IP 192.168.2.1/24.
+Deskripsi Koneksi
+Antar-Router: Router R1, R2, dan R3 terhubung satu sama lain melalui koneksi antar-interface. Koneksi antara R1 dan R2 menggunakan IP 11.11.11.x, antara R1 dan R3 menggunakan IP 10.10.10.x, dan antara R2 dan R3 menggunakan IP 12.12.12.x.
+Koneksi Lokal: Setiap komputer terhubung langsung ke router masing-masing melalui interface tertentu dan memiliki alamat IP dalam subnet berbeda:
+Komputer 1 pada subnet 192.168.1.0/24
+Komputer 2 pada subnet 192.168.3.0/24
+Komputer 3 pada subnet 192.168.2.0/24
